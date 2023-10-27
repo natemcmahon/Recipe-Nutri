@@ -12,11 +12,10 @@
 <body>
     <header class="hero">RecipeNutri</header>
     <nav class="navBar">
-        <ul>
-            About Us
-            Careers
-            Inspired By
-            Contact Us
+        <ul class="nav-list">
+           <li><a href="#aboutus"></a>About Us</li>
+           <li><a href="#inspiredby"></a>Inspired By</li>
+           <li><a href="#contactus"></a>Contact Us</li>
         </ul>
     </nav>
     <div class="container">
@@ -26,9 +25,10 @@
                 <label for="mealInput"></label>
                 <input type="text" id="mealInput" placeholder="Search your meal here..." />
             </div>
-            <button type = "submit" class = "submitBtn">Let's Cook!</button>
+            <button type ="submit" class = "submitBtn">Let's Cook!</button>
         </form>
     </div>
+    <div class="recipe-details" id="recipeDetails"></div>
     <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
     <script src="assets\script.js"></script>
 </body>
