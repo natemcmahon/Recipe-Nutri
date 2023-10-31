@@ -19,7 +19,6 @@
         </ul>
     </nav>
     <div class="container">
-        <h2>Meal Recipe Displayed Here:</h2>
         <form id="recipeForm">
             <div class="searchBar">
                 <label for="mealInput"></label>
@@ -27,6 +26,21 @@
             </div>
             <button type ="submit" class = "submitBtn">Let's Cook!</button>
         </form>
+    </div>
+    <div id = "recipeContainer">
+        <div class = "mealName"></div>
+        <div class = "mealImage"></div>
+        <!-- ol will also include measurements -->
+        <ol class = "ingredientList">Ingredients</ol>
+        <ul class = "instructions">Instructions</ul>
+    </div>
+    <div id = "nutritionalFacts">Nutriton Facts
+        <div class = "energyCal">Calories:</div>
+        <div class = "protein">Protein:</div>
+        <div class = "fat">Fat:</div>
+        <div clss = "carbs">Carbs:</div>
+        <div class = "sugar">Sugar:</div>
+        <div class = "salt">Salt:</div>
     </div>
     <!-- moved div outside of the other container -->
     <div class = "inspiredByContainer">
