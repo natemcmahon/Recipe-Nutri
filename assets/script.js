@@ -1,3 +1,10 @@
+var calorieElement = document.querySelector('.energyCal');
+var proteinElement = document.querySelector('.protein');
+var fatElement = document.querySelector('.fat');
+var carbsElement = document.querySelector('.carbs');
+var sugarElement = document.querySelector('.sugar');
+var saltElement = document.querySelector('.salt');
+
 // array to store strings, ingredients
 var ingredientArray = [];
 
@@ -101,6 +108,15 @@ async function fetchNutritionData(ingredient) {
     }
 }
 
+function displayNutritionFacts() {
+    calorieElement.textContent = "Calories  " + Math.round(kcal_meal_sum);
+    proteinElement.textContent = "Protein  " + Math.round(protein_meal_sum)  + "g";
+    fatElement.textContent = "Total Fat  " + Math.round(fat_meal_sum) + "g";
+    carbsElement.textContent = "Total Carbohydrate  " + Math.round(carbs_meal_sum) + "g";
+    sugarElement.textContent = "Sugars  " + Math.round(sugar_meal_sum) + "g";
+    saltElement.textContent = "Sodium  " + Math.round(sodium_meal_sum) + "mg";
+}
+
 async function main() {
     // Call fetchRecipeData with await to ensure it completes before moving on
     await fetchRecipeData();
@@ -112,13 +128,15 @@ async function main() {
 
     //console logging total nutrients in the meal
     //mostly working 10.29.23, maybe salt needs tweaking? kinda high for pizza
-    console.log("Protein in meal: ", protein_meal_sum);
-    console.log("Fat in meal: ", fat_meal_sum);
-    console.log("Carbs in meal: ", carbs_meal_sum);
-    console.log("Energy in meal: ", kcal_meal_sum);
-    console.log("Sugar in meal: ", sugar_meal_sum);
-    console.log("Salt in meal: ", sodium_meal_sum);
+    // Can probably get rid of this block now --- Nate
+    // console.log("Protein in meal  ", Math.round(protein_meal_sum) + "g");
+    // console.log("Fat in meal  ", Math.round(fat_meal_sum) + "g");
+    // console.log("Carbs in meal  ", Math.round(carbs_meal_sum) + "g");
+    // console.log("Energy in meal  ", Math.round(kcal_meal_sum));
+    // console.log("Sugar in meal  ", Math.round(sugar_meal_sum) + "g");
+    // console.log("Salt in meal  ", Math.round(sodium_meal_sum) + "mg");
 
+    displayNutritionFacts();
 }
 
 main(); // Call the main function to start the process
