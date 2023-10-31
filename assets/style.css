@@ -12,29 +12,11 @@ body {
     padding: 0;
 }
 
-header {
-    background-color: #333;
-    color: #fff;
-    text-align: center;
-    padding: 20px;
-}
-
-.hero {
-    font-size: 60px;
-    margin: 0;
-    padding: 40px;
-    padding-top: 90px;
-    text-align: center;
-    background-color: #E8D6A7;
-    color: #D6A015;
-    border-bottom: 50px;
-    border-top: 30px; 
-    font-size: 120px;
-    font-weight: 600;
-    line-height: 40px;
-    margin: flex;
-    font-family:'Courier New', Courier, monospace;
-    text-shadow: 0px 0px 10px 10px rgb(24, 25, 125);
+img {
+    display: block; 
+    margin: 0 auto; 
+    width: 50%; 
+    max-height: 200px;
 }
 
 /* Container for the content */
@@ -105,6 +87,98 @@ button:hover {
 .navBar li:hover {
     color: #007BFF;
 }
+
+#recipeContainer {
+    float: right;
+    width: 300px;
+    padding: 20px;
+    border: 1px solid #ccc;
+    box-shadow: 0 0 10px rgb(35, 4, 4);
+    border-radius: 10px;
+    margin: 20px;
+    text-align: center;
+    background-color: beige;
+}
+
+.mealName {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.mealImage {
+    width: 100%;
+    max-height: 200px;
+    margin: 10px 0;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.ingredientList, .instructions {
+    list-style: none;
+    padding: 0;
+    text-align: left;
+}
+
+.ingredientList {
+    font-weight: bold;
+}
+
+.ingredientList li, .instructions li {
+    margin: 5px 0;
+}
+
+.instructions {
+    font-weight: normal;
+}
+
+#nutritionalFacts {
+    float: left;
+    border: 2px solid #000;
+    width: 200px;
+    padding: 10px;
+    text-align: left;
+    font-family: Arial, sans-serif;
+    background-color: #f7f7f7;
+}
+
+.nutritionalFacts h2 {
+    font-size: 18px;
+    font-weight: bold;
+    border-bottom: 4px solid #000;
+    margin-bottom: 10px;
+}
+
+.energyCal, .protein, .fat, .carbs, .sugar, .salt {
+    font-size: 15px;
+    font-weight: lighter;
+    border-bottom: 1px solid #000;
+    margin: 5px 0;
+}
+
+.energyCal::before {
+    content: "";
+}
+
+.protein::before {
+    content: "";
+}
+
+.fat::before {
+    content: "";
+}
+
+.carbs::before {
+    content: "";
+}
+
+.sugar::before {
+    content: "";
+}
+
+.salt::before {
+    content: "";
+}
+
 footer {
 padding: 50px;
   text-align: center;
@@ -112,6 +186,13 @@ padding: 50px;
   color: #D6A015;
   font-size: 40px;
   font-weight: 600;
-  font-family: "Sofia", sans-serif;
+  font-family:'Courier New', Courier, monospace;
   flex: auto;
+}
+
+.section{
+    font-size: 30px;
+    font-weight: 600;
+    font-family:'Courier New', Courier, monospace;
+
 }
