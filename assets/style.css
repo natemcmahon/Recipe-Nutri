@@ -105,3 +105,13 @@ button:hover {
 .navBar li:hover {
     color: #007BFF;
 }
+footer {
+padding: 50px;
+  text-align: center;
+  background-color: #E8D6A7;
+  color: #D6A015;
+  font-size: 40px;
+  font-weight: 600;
+  font-family: "Sofia", sans-serif;
+  flex: auto;
+}
