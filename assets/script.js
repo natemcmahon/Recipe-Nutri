@@ -54,9 +54,9 @@ async function fetchRecipeData() {
     }
 }
 
-async function fetchNutritionData(ingedient) {
+async function fetchNutritionData(ingredient) {
     try {
-        ing_nutr_api = fdcNutritionBaseApi + fdcApiKey + '&query=' + ingedient;
+        ing_nutr_api = fdcNutritionBaseApi + fdcApiKey + '&query=' + ingredient;
         // console.log(ing_nutr_api)
         const response = await fetch(ing_nutr_api, {
             mode: "cors",
