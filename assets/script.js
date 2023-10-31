@@ -54,9 +54,9 @@ async function fetchRecipeData() {
     }
 }
 
-async function fetchNutritionData(ingedient) {
+async function fetchNutritionData(ingredient) {
     try {
-        ing_nutr_api = fdcNutritionBaseApi + fdcApiKey + '&query=' + ingedient;
+        ing_nutr_api = fdcNutritionBaseApi + fdcApiKey + '&query=' + ingredient;
         // console.log(ing_nutr_api)
         const response = await fetch(ing_nutr_api, {
             mode: "cors",
@@ -112,7 +112,7 @@ async function main() {
 
     //console logging total nutrients in the meal
     //mostly working 10.29.23, maybe salt needs tweaking? kinda high for pizza
-    console.log("Protien in meal: ", protein_meal_sum);
+    console.log("Protein in meal: ", protein_meal_sum);
     console.log("Fat in meal: ", fat_meal_sum);
     console.log("Carbs in meal: ", carbs_meal_sum);
     console.log("Energy in meal: ", kcal_meal_sum);
