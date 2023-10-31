@@ -5,10 +5,36 @@ var ingredientArray = [];
 var recipeBaseApi = 'https://www.themealdb.com/api/json/v1/1/search.php?s=';
 
 // placeholder user entry for a recipe, will eventually be replaced by user entry
-var userEntryPlaceholder = 'pizza';
+///////var userEntryPlaceholder = 'pizza';
 
-// concatenate MealDB API
-var recipeTestApi = recipeBaseApi + userEntryPlaceholder;
+var formData = null;
+//var recipeTestApi = ""; // CORS discrpency, doesn't work; null also doesn't work
+
+document.addEventListener('DOMContentLoaded', function () {
+    const formEl = document.getElementById('recipeForm');
+
+    formEl.addEventListener('submit', (event) => {
+        event.preventDefault();
+
+        const formData = new FormData(formEl);
+        const data = new URLSearchParams(formData);
+
+        const recipeTestApi = recipeBaseApi + formData.get('mealInput');
+        console.log(recipeTestApi);
+
+        fetch('https://www.themealdb.com/api/json/v1/1/search.php?s=', {
+            method: 'POST',
+            body: data
+        }).then(res => res.json())
+            .then(data => console.log(data))
+            .catch(error => console.log(error));
+    });
+});
+
+////// concatenate MealDB API
+//var recipeTestApi = recipeBaseApi + userEntryPlaceholder;
+// var recipeTestApi = recipeBaseApi + formData;
+// console.log(recipeTestApi);
 
 // fdc api setup, we append ingredients from MealDB api below
 var fdcNutritionBaseApi = 'https://api.nal.usda.gov/fdc/v1/foods/search?api_key=';
@@ -96,7 +122,7 @@ async function fetchNutritionData(ingredient) {
         } else {
             console.log('Error fetching nutrition data:', response.status, response.statusText);
         }
-    } catch(error) {
+    } catch (error) {
         console.error('Error fetching nutrition data:', error);
     }
 }
