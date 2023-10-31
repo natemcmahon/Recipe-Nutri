@@ -12,29 +12,11 @@ body {
     padding: 0;
 }
 
-header {
-    background-color: #333;
-    color: #fff;
-    text-align: center;
-    padding: 20px;
-}
-
-.hero {
-    font-size: 60px;
-    margin: 0;
-    padding: 40px;
-    padding-top: 90px;
-    text-align: center;
-    background-color: #E8D6A7;
-    color: #D6A015;
-    border-bottom: 50px;
-    border-top: 30px; 
-    font-size: 120px;
-    font-weight: 600;
-    line-height: 40px;
-    margin: flex;
-    font-family:'Courier New', Courier, monospace;
-    text-shadow: 0px 0px 10px 10px rgb(24, 25, 125);
+img {
+    display: block; 
+    margin: 0 auto; 
+    width: 50%; 
+    max-height: 200px;
 }
 
 /* Container for the content */
@@ -105,6 +87,54 @@ button:hover {
 .navBar li:hover {
     color: #007BFF;
 }
+
+#nutritionalFacts {
+    border: 2px solid #000;
+    width: 200px;
+    padding: 10px;
+    text-align: left;
+    font-family: Arial, sans-serif;
+    background-color: #f7f7f7;
+}
+
+.nutritionalFacts h2 {
+    font-size: 18px;
+    font-weight: bold;
+    border-bottom: 4px solid #000;
+    margin-bottom: 10px;
+}
+
+.energyCal, .protein, .fat, .carbs, .sugar, .salt {
+    font-size: 15px;
+    font-weight: lighter;
+    border-bottom: 1px solid #000;
+    margin: 5px 0;
+}
+
+.energyCal::before {
+    content: "Calories ";
+}
+
+.protein::before {
+    content: "Protein ";
+}
+
+.fat::before {
+    content: "Fat ";
+}
+
+.carbs::before {
+    content: "Carbs ";
+}
+
+.sugar::before {
+    content: "Sugar ";
+}
+
+.salt::before {
+    content: "Salt ";
+}
+
 footer {
 padding: 50px;
   text-align: center;

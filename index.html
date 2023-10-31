@@ -10,7 +10,8 @@
 </head>
 
 <body>
-    <header class="hero">RecipeNutri</header>
+    <!-- changed header tag to an image tag -->
+    <img src = "assets\images\Screenshot 2023-10-30 183719.png" alt = "handwritten RecipeNutri with a border made up of meal dishes and other food">
     <nav class="navBar">
         <ul class="nav-list">
            <li><a href="#aboutus"></a>About Us</li>
@@ -34,13 +35,15 @@
         <ul class = "ingredientList">Ingredients</ul>
         <ol class = "instructions">Instructions</ol>
     </div>
-    <div id = "nutritionalFacts">Nutriton Facts
-        <div class = "energyCal">Calories:</div>
-        <div class = "protein">Protein:</div>
-        <div class = "fat">Fat:</div>
-        <div class = "carbs">Carbs:</div>
-        <div class = "sugar">Sugar:</div>
-        <div class = "salt">Salt:</div>
+    <!-- added class for nutritional facts div, deleted text content so it will be autopopulated with API data-->
+    <div id = "nutritionalFacts" class = "nutritionalFacts">
+        <h2>Nutrition Facts</h2>
+        <div class = "energyCal"></div>
+        <div class = "protein"></div>
+        <div class = "fat"></div>
+        <div class = "carbs"></div>
+        <div class = "sugar"></div>
+        <div class = "salt"></div>
     </div>
     <!-- moved div outside of the other container -->
     <div class = "inspiredByContainer">
