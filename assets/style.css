@@ -112,6 +112,13 @@ padding: 50px;
   color: #D6A015;
   font-size: 40px;
   font-weight: 600;
-  font-family: "Sofia", sans-serif;
+  font-family:'Courier New', Courier, monospace;
   flex: auto;
+}
+
+.section{
+    font-size: 30px;
+    font-weight: 600;
+    font-family:'Courier New', Courier, monospace;
+
 }
