@@ -11,12 +11,13 @@
 
 <body>
     <!-- changed header tag to an image tag -->
-    <img src = "assets\images\Screenshot 2023-10-30 183719.png" alt = "handwritten RecipeNutri with a border made up of meal dishes and other food">
+    <img src="assets/images/RecipeNutriCoverImg.png"" alt = " handwritten RecipeNutri with a border made up of meal
+        dishes and other food">
     <nav class="navBar">
         <ul class="nav-list">
-           <li><a href="#aboutus"></a>About Us</li>
-           <li><a href="#inspiredby"></a>Inspired By</li>
-           <li><a href="#contactus"></a>Contact Us</li>
+            <li><a href="#aboutus"></a>About Us</li>
+            <li><a href="#inspiredby"></a>Inspired By</li>
+            <li><a href="#contactus"></a>Contact Us</li>
         </ul>
     </nav>
     <div class="container">
@@ -25,68 +26,112 @@
                 <label for="mealInput"></label>
                 <input type="text" id="mealInput" placeholder="Search your meal here..." />
             </div>
-            <button type ="submit" class = "submitBtn">Let's Cook!</button>
+            <button type="submit" class="submitBtn">Let's Cook!</button>
         </form>
 
     </div>
-    <div id = "recipeContainer">
-        <div class = "mealName"></div>
-        <div class = "mealImage"></div>
-        <!-- ol will also include measurements -->
-        <ul class = "ingredientList">Ingredients</ul>
-        <ol class = "instructions">Instructions</ol>
-    </div>
-    <!-- added class for nutritional facts div, deleted text content so it will be autopopulated with API data-->
-    <div id = "nutritionalFacts" class = "nutritionalFacts">
-        <h2>Nutrition Facts</h2>
-        <div class = "energyCal"></div>
-        <div class = "protein"></div>
-        <div class = "fat"></div>
-        <div class = "carbs"></div>
-        <div class = "sugar"></div>
-        <div class = "salt"></div>
+    <!-- added nutrition label and recipe card into one section -->
+    <div class="recipeANDnutritionCont">
+        <!-- added class for nutritional facts div, deleted text content so it will be autopopulated with API data-->
+        <div id="nutritionalFacts" class="nutritionalFacts">
+            <h2>Nutrition Facts</h2>
+            <div class="energyCal"></div>
+            <div class="protein"></div>
+            <div class="fat"></div>
+            <div class="carbs"></div>
+            <div class="sugar"></div>
+            <div class="salt"></div>
+        </div>
+        <!-- switched recipe/nutrition label so the label appears on the left -->
+        <div id="recipeContainer">
+            <div class="mealName"></div>
+            <div class="mealImage"></div>
+            <!-- ol will also include measurements -->
+            <ul class="ingredientList">Ingredients</ul>
+            <textarea class = "instructions">Instructions</textarea>
+        </div>
     </div>
     <!-- moved div outside of the other container -->
-    <div class = "inspiredByContainer">
+    <div id="dietContainer" class="dietContainer">
         <h2>The Importance of a Balanced Diet</h2>
-        <h3>A balanced diet is crucial for maintaining good health and well-being. It provides the body with the necessary nutrients, energy, and other essential components needed to function properly. Here are some of the key reasons why a balanced diet is important:
+        <h3>A balanced diet is crucial for maintaining good health and well-being. It provides the body with the
+            necessary nutrients, energy, and other essential components needed to function properly. Here are some of
+            the key reasons why a balanced diet is important:
             <ol>
-                <li>Nutrient Intake: A balanced diet ensures that you get a wide variety of essential nutrients, including carbohydrates, proteins, fats, vitamins, and minerals. Each of these nutrients plays a specific role in maintaining various bodily functions.</li>
-                <li>Energy: The body needs a balanced intake of carbohydrates, fats, and proteins to provide the necessary energy for daily activities and bodily functions. The right balance helps maintain energy levels and prevents fatigue.</li>
-                <li>Weight Management: Maintaining a balanced diet can help with weight management. It ensures that you're neither overeating nor under-eating, which can lead to weight gain or loss.</li>
-                <li>Healthy Growth and Development: A balanced diet is crucial for children and adolescents as it supports proper growth and development. It provides the necessary nutrients for building and repairing tissues</li>
-                <li>Disease Prevention: A well-balanced diet can reduce the risk of chronic diseases such as heart disease, diabetes, and certain types of cancer. For example, a diet rich in fruits and vegetables can lower the risk of heart disease.</li>
-                <li>Digestive Health: High-fiber foods, which are typically part of a balanced diet, support healthy digestion and prevent constipation. They also contribute to a feeling of fullness, which can help control overeating.</li>
-                <li>Strong Immune System: A balanced diet provides the vitamins and minerals needed to support a strong immune system, helping the body fight off illnesses and infections.</li>
-                <li>Mental Health: Proper nutrition can also have a positive impact on mental health. Nutrients like omega-3 fatty acids, found in fish, and antioxidants from fruits and vegetables can support cognitive function and may help reduce the risk of mental health disorders.</li>
-                <li>Healthy Skin and Hair: Nutrients like vitamin E, vitamin C, and biotin, which are commonly found in a balanced diet, can contribute to healthy skin and hair.</li>
-                <li>Longevity: A balanced diet is associated with a longer, healthier life. It can help extend lifespan and improve overall quality of life.</li>
+                <li>Nutrient Intake: A balanced diet ensures that you get a wide variety of essential nutrients,
+                    including carbohydrates, proteins, fats, vitamins, and minerals. Each of these nutrients plays a
+                    specific role in maintaining various bodily functions.</li>
+                <li>Energy: The body needs a balanced intake of carbohydrates, fats, and proteins to provide the
+                    necessary energy for daily activities and bodily functions. The right balance helps maintain energy
+                    levels and prevents fatigue.</li>
+                <li>Weight Management: Maintaining a balanced diet can help with weight management. It ensures that
+                    you're neither overeating nor under-eating, which can lead to weight gain or loss.</li>
+                <li>Healthy Growth and Development: A balanced diet is crucial for children and adolescents as it
+                    supports proper growth and development. It provides the necessary nutrients for building and
+                    repairing tissues</li>
+                <li>Disease Prevention: A well-balanced diet can reduce the risk of chronic diseases such as heart
+                    disease, diabetes, and certain types of cancer. For example, a diet rich in fruits and vegetables
+                    can lower the risk of heart disease.</li>
+                <li>Digestive Health: High-fiber foods, which are typically part of a balanced diet, support healthy
+                    digestion and prevent constipation. They also contribute to a feeling of fullness, which can help
+                    control overeating.</li>
+                <li>Strong Immune System: A balanced diet provides the vitamins and minerals needed to support a strong
+                    immune system, helping the body fight off illnesses and infections.</li>
+                <li>Mental Health: Proper nutrition can also have a positive impact on mental health. Nutrients like
+                    omega-3 fatty acids, found in fish, and antioxidants from fruits and vegetables can support
+                    cognitive function and may help reduce the risk of mental health disorders.</li>
+                <li>Healthy Skin and Hair: Nutrients like vitamin E, vitamin C, and biotin, which are commonly found in
+                    a balanced diet, can contribute to healthy skin and hair.</li>
+                <li>Longevity: A balanced diet is associated with a longer, healthier life. It can help extend lifespan
+                    and improve overall quality of life.</li>
             </ol>
-            It's important to note that a balanced diet can vary depending on individual needs, including age, gender, activity level, and any specific dietary restrictions or health conditions. Consulting with a healthcare professional or a registered dietitian can help create a personalized balanced diet plan that meets your specific requirements.
+            It's important to note that a balanced diet can vary depending on individual needs, including age, gender,
+            activity level, and any specific dietary restrictions or health conditions. Consulting with a healthcare
+            professional or a registered dietitian can help create a personalized balanced diet plan that meets your
+            specific requirements.
         </h3>
-        <img src = "assets\images\food-pyramid.jpeg" alt = "food pyramid of daily servings of each food group">
+        <img src="assets\images\food-pyramid.jpeg" alt="food pyramid of daily servings of each food group">
     </div>
-    <div class="container">
-    <div id="aboutus" class="section">
-        <h2>About Us</h2>
-        <p>Welcome to RecipeNutri! We are a team of food enthusiasts passionate about sharing delicious and nutritious meal ideas with you. Our goal is to inspire and help you create mouthwatering dishes that are not only tasty but also good for your health. Explore our collection of recipes and start your culinary adventure with us!
-    </div>
-    <div id="inspiredby" class="section">
-        <h2>Inspired By</h2>
-        <p>At RecipeNutri, our passion for good food and healthy living is what drives us. Our journey began with a simple idea: to inspire others to create and enjoy delicious, nutritious meals. Our project is inspired by a few core principles:</p>
-        <ol>
-            <li>Love for Culinary Exploration: We believe that cooking is a form of art, and we're here to encourage you to embark on a culinary adventure. Our recipes are designed to spark your creativity and help you discover the joy of cooking.</li>
-            <li>Nutritional Well-Being: We're inspired by the power of a well-balanced diet to promote overall health and vitality. Our recipes are carefully crafted to provide the nutrients your body needs, without compromising on flavor.</li>
-            <li>Sharing and Community: Food brings people together, and our project is inspired by the idea of sharing great meals with family and friends. We're excited to be part of a community that values good food and good company.</li>
-            <li>Sustainability: We're committed to sustainable and ethical food practices. Our project is inspired by the desire to make environmentally conscious choices and reduce food waste.</li>
-            <li>Exploration of Global Cuisines: Our inspiration comes from the rich diversity of global cuisines. We're dedicated to bringing you a taste of flavors from around the world.</li>
-        </ol>
-           <p>Our goal is to provide you with recipes, tips, and information that reflect these values. We hope you find inspiration in our project and join us on a culinary journey towards a healthier and more delicious life.</p>
+    <div class="bottom-container">
+        <div id="aboutus" class="section">
+            <h2>About Us</h2>
+            <p>Welcome to RecipeNutri! We are a team of food enthusiasts passionate about sharing delicious and
+                nutritious meal ideas with you. Our goal is to inspire and help you create mouthwatering dishes that are
+                not only tasty but also good for your health. Explore our collection of recipes and start your culinary
+                adventure with us!
         </div>
-           <div id="contactus" class="section">
-        <h2>Contact Us</h2>
-        <p>If you have any questions or comments, feel free to contact us at our perspective Github accounts <a style="text-decoration:none;"href="https://github.com/natemcmahon">Nate Mcmahon,</a><a style="text-decoration:none;"href="https://github.com/AnnaT7459"> Anna Turner,</a><a style="text-decoration:none;" href="https://github.com/madelineccstahl"> Madeline Stahl,</a><a style="text-decoration:none;" href="https://github.com/sarahizar"> Sara McCauley</p>
-    </div>
+        <div id="inspiredby" class="section">
+            <h2>Inspired By</h2>
+            <p>At RecipeNutri, our passion for good food and healthy living is what drives us. Our journey began with a
+                simple idea: to inspire others to create and enjoy delicious, nutritious meals. Our project is inspired
+                by a few core principles:</p>
+            <ul>
+                <li>Love for Culinary Exploration: We believe that cooking is a form of art, and we're here to encourage
+                    you to embark on a culinary adventure. Our recipes are designed to spark your creativity and help
+                    you discover the joy of cooking.</li>
+                <li>Nutritional Well-Being: We're inspired by the power of a well-balanced diet to promote overall
+                    health and vitality. Our recipes are carefully crafted to provide the nutrients your body needs,
+                    without compromising on flavor.</li>
+                <li>Sharing and Community: Food brings people together, and our project is inspired by the idea of
+                    sharing great meals with family and friends. We're excited to be part of a community that values
+                    good food and good company.</li>
+                <li>Sustainability: We're committed to sustainable and ethical food practices. Our project is inspired
+                    by the desire to make environmentally conscious choices and reduce food waste.</li>
+                <li>Exploration of Global Cuisines: Our inspiration comes from the rich diversity of global cuisines.
+                    We're dedicated to bringing you a taste of flavors from around the world.</li>
+            </ul>
+            <p>Our goal is to provide you with recipes, tips, and information that reflect these values. We hope you
+                find inspiration in our project and join us on a culinary journey towards a healthier and more delicious
+                life.</p>
+        </div>
+        <div id="contactus" class="section">
+            <h2>Contact Us</h2>
+            <p>If you have any questions or comments, feel free to contact us at our perspective Github accounts <a
+                    style="text-decoration:none;" href="https://github.com/natemcmahon">Nate Mcmahon,</a><a
+                    style="text-decoration:none;" href="https://github.com/AnnaT7459"> Anna Turner,</a><a
+                    style="text-decoration:none;" href="https://github.com/madelineccstahl"> Madeline Stahl,</a><a
+                    style="text-decoration:none;" href="https://github.com/sarahizar"> Sara McCauley</p>
+        </div>
     </div>
     <footer class="footer">
         <p>RecipeNutri</p>
