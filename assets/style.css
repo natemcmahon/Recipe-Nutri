@@ -96,7 +96,7 @@ button:hover {
     flex: 1;
     margin: 20px;
     border: 2px solid #000;
-    width: 200px;
+    max-width: 200px;
     padding: 10px;
     text-align: left;
     font-family: Arial, sans-serif;
