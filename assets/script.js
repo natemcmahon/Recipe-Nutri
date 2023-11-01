@@ -4,6 +4,7 @@ var fatElement = document.querySelector('.fat');
 var carbsElement = document.querySelector('.carbs');
 var sugarElement = document.querySelector('.sugar');
 var saltElement = document.querySelector('.salt');
+var instructionsElement = document.querySelector('.instructions');
 
 // array to store strings, ingredients
 var ingredientArray = [];
@@ -41,6 +42,10 @@ async function fetchRecipeData() {
             // console.log(data);
             // console.log(data.meals[0]);
             var accessor = 'strIngredient';
+
+            // nate test
+            // console.log(data.meals[0].strInstructions);
+            instructionsElement.textContent = data.meals[0].strInstructions;
 
             // Loop to set up an array of ingredients which we will pass one by one to our fdc nutrition API below
             for (var i = 1; i < 21; i++) {
@@ -115,6 +120,8 @@ function displayNutritionFacts() {
     carbsElement.textContent = "Total Carbohydrate  " + Math.round(carbs_meal_sum) + "g";
     sugarElement.textContent = "Sugars  " + Math.round(sugar_meal_sum) + "g";
     saltElement.textContent = "Sodium  " + Math.round(sodium_meal_sum) + "mg";
+
+    
 }
 
 async function main() {
