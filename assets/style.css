@@ -231,11 +231,12 @@ li{
 }
 
 .bottom-container{
-    position:absolute;
     bottom: 120px;
     width: 100%;
     margin-top: 70px;
     padding: 20 20 20 20px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
 }
 
 .footer {
@@ -247,6 +248,5 @@ li{
       font-weight: 600;
       font-family:'Courier New', Courier, monospace;
       width: 100%;
-      position: fixed;
       bottom:0;
     }
