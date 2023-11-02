@@ -13,10 +13,10 @@ body {
     /* box-sizing: border-box; */
 }
 
-img {
-    display: block; 
-    margin: 0 auto; 
-    width: 100%; 
+.webTitle {
+    display: block;
+    margin: 0 auto;
+    max-width: fit-content;
     max-height: 275px;
 }
 
@@ -68,7 +68,14 @@ button:hover {
     padding: 20px;
     margin: 0;
     font-size: 20px;
+<<<<<<< HEAD
+    font-weight: 600;
+}
+
+.navBar {
+=======
     font-weight: 600; 
+>>>>>>> main
     list-style: none;
     padding: 0;
     cursor: pointer;
@@ -88,7 +95,7 @@ button:hover {
     color: #007BFF;
 }
 
-.recipeANDnutritionCont{
+.recipeANDnutritionCont {
     display: flex;
 }
 
@@ -110,7 +117,12 @@ button:hover {
     margin-bottom: 10px;
 }
 
-.energyCal, .protein, .fat, .carbs, .sugar, .salt {
+.energyCal,
+.protein,
+.fat,
+.carbs,
+.sugar,
+.salt {
     font-size: 15px;
     font-weight: lighter;
     border-bottom: 1px solid #000;
@@ -167,7 +179,8 @@ button:hover {
     overflow: hidden;
 }
 
-.ingredientList, .instructions {
+.ingredientList,
+.instructions {
     list-style: none;
     padding: 0;
     text-align: left;
@@ -177,7 +190,8 @@ button:hover {
     font-weight: bold;
 }
 
-.ingredientList li, .instructions li {
+.ingredientList li,
+.instructions li {
     margin: 5px 0;
 }
 
@@ -186,27 +200,36 @@ button:hover {
 }
 
 #dietContainer {
-    clear: both; 
-    width: 100%;
+    display: flex; 
+    align-items: center; 
     padding: 20px;
 }
 
+.foodPyramid {
+    max-width: 300px;
+    margin-left: 20px;
+}
+
 .dietContainer h2 {
+    font-family: 'Beth Ellen', cursive;
     font-size: 24px;
-    font-weight: bold;
+    text-align: center;
     margin-bottom: 10px;
 }
 
 .dietContainer h3 {
-    font-size: 16px;
-    font-weight: normal;
-    text-align: left;
+    font-family: 'Caveat', cursive;
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
 }
 
 .dietContainer ol {
     list-style: decimal;
+    font-weight: normal;
     padding-left: 20px;
     margin-top: 10px;
+    text-align: left;
 }
 
 .dietContainer li {
