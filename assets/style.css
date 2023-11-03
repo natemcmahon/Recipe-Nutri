@@ -68,14 +68,11 @@ button:hover {
     padding: 20px;
     margin: 0;
     font-size: 20px;
-<<<<<<< HEAD
     font-weight: 600;
 }
 
 .navBar {
-=======
     font-weight: 600; 
->>>>>>> main
     list-style: none;
     padding: 0;
     cursor: pointer;
@@ -273,3 +270,13 @@ li{
       width: 100%;
       bottom:0;
     }
+
+  /* Mobile-first media query for mobile devices */
+@media (max-width: 767px) {
+    /* Styles for screens with a width of 767px or less (typically mobile devices) */
+}
+
+/* Media query for desktop screens */
+@media (min-width: 1000px) {
+    /* Styles for screens with a minimum width of 1000px (typically desktops) */
+}
