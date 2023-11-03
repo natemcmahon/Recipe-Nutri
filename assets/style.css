@@ -68,14 +68,11 @@ button:hover {
     padding: 20px;
     margin: 0;
     font-size: 20px;
-<<<<<<< HEAD
     font-weight: 600;
 }
 
 .navBar {
-=======
     font-weight: 600; 
->>>>>>> main
     list-style: none;
     padding: 0;
     cursor: pointer;
