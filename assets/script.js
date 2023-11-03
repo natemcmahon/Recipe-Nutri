@@ -26,6 +26,7 @@ var recipeTestApi = ""; // CORS discrpency, doesn't work; null also doesn't work
 document.addEventListener('DOMContentLoaded', function () {
     const formEl = document.getElementById('recipeForm');
 
+
     formEl.addEventListener('submit', async (event) => {
         event.preventDefault();
 
@@ -47,7 +48,6 @@ document.addEventListener('DOMContentLoaded', function () {
         }
 
         displayNutritionFacts();
-
     });
 });
 

@@ -272,11 +272,11 @@ li{
     }
 
   /* Mobile-first media query for mobile devices */
-@media (max-width: 767px) {
+@media (min-width: 400px) { 
     /* Styles for screens with a width of 767px or less (typically mobile devices) */
 }
 
 /* Media query for desktop screens */
-@media (min-width: 1000px) {
+@media (max-width: 1000px) {
     /* Styles for screens with a minimum width of 1000px (typically desktops) */
 }
