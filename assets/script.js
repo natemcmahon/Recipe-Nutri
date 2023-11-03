@@ -5,6 +5,7 @@ var carbsElement = document.querySelector('.carbs');
 var sugarElement = document.querySelector('.sugar');
 var saltElement = document.querySelector('.salt');
 var instructionsElement = document.querySelector('.instructions');
+var ingredientsElement = document.querySelector('.ingredientList');
 
 var protein_meal_sum = 0.0;
 var fat_meal_sum = 0.0;
@@ -65,24 +66,33 @@ async function fetchRecipeData(recipeName) {
         const response = await fetch(recipeBaseApi + recipeName, {
             mode: "cors",
         });
-        console.log(response);
+            // console.log(response);
         if (response.ok) {
             const data = await response.json();
-            console.log(data);
-            console.log(data.meals[0]);
+            // console.log(data);
+            // console.log(data.meals[0]);
             var accessor = 'strIngredient';
+            var measurementAccessor = 'strMeasure';
 
             // nate test
             // console.log(data.meals[0].strInstructions);
-            //instructionsElement.textContent = data.meals[0].strInstructions;
+            instructionsElement.textContent = data.meals[0].strInstructions;
 
             // Loop to set up an array of ingredients which we will pass one by one to our fdc nutrition API below
             for (var i = 1; i < 21; i++) {
                 var storer = accessor + i;
-                // console.log(storer);
-                var currentIngredient = data.meals[0][storer];
+                var measurementStorer = measurementAccessor + i;
 
-                if (currentIngredient !== "") {
+                var currentIngredient = data.meals[0][storer];
+                var currentMeasurement = data.meals[0][measurementStorer];
+
+                // append list of ingredients to ul ingredientList ul
+                var li = document.createElement("li");
+                ingredientsElement.appendChild(li);
+                // console.log(currentMeasurement);
+                li.textContent =  currentMeasurement + " " + currentIngredient;
+
+                if (currentIngredient !== null) {
                     currentIngredient = currentIngredient.trim();
                     ingredientArray.push(currentIngredient);
                 }
