@@ -6,6 +6,13 @@ var sugarElement = document.querySelector('.sugar');
 var saltElement = document.querySelector('.salt');
 var instructionsElement = document.querySelector('.instructions');
 
+var protein_meal_sum = 0.0;
+var fat_meal_sum = 0.0;
+var carbs_meal_sum = 0.0;
+var kcal_meal_sum = 0.0;
+var sugar_meal_sum = 0.0;
+var sodium_meal_sum = 0.0;
+
 // array to store strings, ingredients
 var ingredientArray = [];
 
@@ -18,7 +25,7 @@ var recipeTestApi = ""; // CORS discrpency, doesn't work; null also doesn't work
 document.addEventListener('DOMContentLoaded', function () {
     const formEl = document.getElementById('recipeForm');
 
-    formEl.addEventListener('submit', async(event) => {
+    formEl.addEventListener('submit', async (event) => {
         event.preventDefault();
 
         var mealInput = document.querySelector('#mealInput').value;
@@ -26,13 +33,20 @@ document.addEventListener('DOMContentLoaded', function () {
 
         await fetchRecipeData(mealInput);
 
+        protein_meal_sum = 0.0;
+        fat_meal_sum = 0.0;
+        carbs_meal_sum = 0.0;
+        kcal_meal_sum = 0.0;
+        sugar_meal_sum = 0.0;
+        sodium_meal_sum = 0.0;
+
         // Loop through each ingredient, one fetch per
         for (i = 0; i < ingredientArray.length; i++) {
             await fetchNutritionData(ingredientArray[i]);
         }
-        
+
         displayNutritionFacts();
-    
+
     });
 });
 
@@ -40,18 +54,9 @@ document.addEventListener('DOMContentLoaded', function () {
 var recipeTestApi = recipeBaseApi + formData;
 console.log(recipeTestApi);
 
-//////////
-
 // fdc api setup, we append ingredients from MealDB api below
 var fdcNutritionBaseApi = 'https://api.nal.usda.gov/fdc/v1/foods/search?api_key=';
 var fdcApiKey = 'HdbPDR894aXY2G8mKcBsM3yf6FkjCrWrR6zYgagg';
-
-var protein_meal_sum = 0.0;
-var fat_meal_sum = 0.0;
-var carbs_meal_sum = 0.0;
-var kcal_meal_sum = 0.0;
-var sugar_meal_sum = 0.0;
-var sodium_meal_sum = 0.0;
 
 
 // async function to fetch recipe data
@@ -60,7 +65,7 @@ async function fetchRecipeData(recipeName) {
         const response = await fetch(recipeBaseApi + recipeName, {
             mode: "cors",
         });
-console.log(response);
+        console.log(response);
         if (response.ok) {
             const data = await response.json();
             console.log(data);
