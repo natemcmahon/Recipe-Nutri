@@ -28,19 +28,15 @@
             <li><a style="text-decoration:none;" href="#contactus">Contact Us</a></li>
         </ul>
     </nav>
-<form>
-    <div class ="row">
-        <div class="column">
-            <label for="mealInput"></label>
-            <input id="recipeForm" class= "u-full-width" type="text" id="mealInput" placeholder="Search your meal here..." />
-        </div>
-        <div class="column">
-            <button type="submit" class="submitBtn">Let's Cook!</button>
-            <!-- <input class="button-primary" type="submit" value="Search"> -->
-        </div>
-    </div>
-</form>
 
+    <div class="container">
+        <form id="recipeForm">
+            <div class="searchBar">
+                <label for="mealInput"></label>
+                <input type="text" id="mealInput" placeholder="Search your meal here..." />
+            </div>
+        </form>
+    </div> 
     <!-- added nutrition label and recipe card into one section -->
     <div class="recipeANDnutritionCont">
         <!-- added class for nutritional facts div, deleted text content so it will be autopopulated with API data-->
