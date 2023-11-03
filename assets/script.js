@@ -32,6 +32,10 @@ document.addEventListener('DOMContentLoaded', function () {
         var mealInput = document.querySelector('#mealInput').value;
         console.log(mealInput);
 
+        //clear ingredientArray each submit to prevent nutrition values
+        //accumulating search totals
+        ingredientArray = [];
+
         await fetchRecipeData(mealInput);
 
         protein_meal_sum = 0.0;
