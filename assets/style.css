@@ -1,16 +1,16 @@
 * {
     margin: 0;
     padding: 0;
-    /* box-sizing: border-box; */
+    
 }
 
-/* Basic styles for the body and header--will update more later */
+
 body {
     font-family: Arial, sans-serif;
     background-color: #7E6960;
     margin: 0;
     padding: 0px;
-    /* box-sizing: border-box; */
+    
 }
 
 header {
