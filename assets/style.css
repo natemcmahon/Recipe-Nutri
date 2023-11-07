@@ -1,16 +1,16 @@
 * {
     margin: 0;
     padding: 0;
-    /* box-sizing: border-box; */
+    
 }
 
-/* Basic styles for the body and header--will update more later */
+
 body {
     font-family: Arial, sans-serif;
     background-color: #7E6960;
     margin: 0;
     padding: 0px;
-    /* box-sizing: border-box; */
+    
 }
 
 header {
@@ -171,6 +171,12 @@ button:hover {
     border-radius: 10px;
     text-align: center;
     background-color: beige;
+}
+
+#recipeContainer > .instructions {
+    resize: none;
+    width: 100%;
+    height: 250px;
 }
 
 .mealName {
